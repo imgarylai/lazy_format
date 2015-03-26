@@ -7,15 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "lazy_format"
   spec.version       = LazyFormat::VERSION
   spec.authors       = ["zxlai"]
-  spec.email         = ["garylai1990@gmail.com"]
+  spec.email         = ["gary@jungllle.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Convention format helpers.}
+  spec.homepage      = "https://github.com/Jungllle/lazy_format"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
