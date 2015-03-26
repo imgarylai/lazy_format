@@ -1,8 +1,6 @@
 # LazyFormat
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lazy_format`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Provide convention format rails helpers.
 
 ## Installation
 
@@ -16,13 +14,27 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install lazy_format
-
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+lazy_datetime @article.created_at
+# => 2015-03-25 17:19
+lazy_date @article.created_at
+# => 2015-03-25
+lazy_percentage @team.winning_rate
+# => 57.23%
+lazy_percentage @team.winning_rate, 3
+# => 57.234%
+lazy_precision @student.averge_score
+# => 92.32
+lazy_precision @student.averge_score, 5
+# => 92.32456
+```
+
+## TODO:
+
+1. More helpers
+2. flexiable
 
 ## Development
 
@@ -32,7 +44,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/lazy_format/fork )
+1. Fork it ( https://github.com/Jungllle/lazy_format/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
