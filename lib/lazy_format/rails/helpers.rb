@@ -1,19 +1,19 @@
 module LazyFormat
   module Rails
     module ViewHelpers
-      def humanize_datetime(time)
+      def lazy_datetime(time)
         if time
           time.strftime("%Y-%m-%d %H:%M")
         end
       end
 
-      def humanize_date(time)
+      def lazy_date(time)
         if time
           time.strftime("%Y-%m-%d")
         end
       end
 
-      def percentage number, digit = 2
+      def lazy_percentage number, digit = 2
         if number.is_a? Numeric
           number_to_percentage(number * 100, precision: digit)
         else
@@ -21,7 +21,7 @@ module LazyFormat
         end
       end
 
-      def precision number, digit = 2
+      def lazy_precision number, digit = 2
         if number.is_a? Numeric
           number_with_precision(number, precision: digit)
         else
