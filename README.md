@@ -34,7 +34,7 @@ lazy_precision @student.averge_score, 5
 ## TODO:
 
 1. More helpers
-2. flexiable
+2. Flexiablity
 
 ## Development
 
