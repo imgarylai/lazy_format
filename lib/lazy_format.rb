@@ -6,11 +6,6 @@ module LazyFormat
       register_rails_engine
     end
 
-    # Paths
-    def gem_path
-      @gem_path ||= File.expand_path('..', File.dirname(__FILE__))
-    end
-
     # Environment detection helpers
     def rails?
       defined?(::Rails)
