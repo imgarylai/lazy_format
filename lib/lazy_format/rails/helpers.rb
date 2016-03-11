@@ -2,14 +2,18 @@ module LazyFormat
   module Rails
     module ViewHelpers
       def lazy_datetime(time)
-        if time
-          time.strftime("%Y-%m-%d %H:%M")
+        if time.is_a? Time
+          time.try(:strftime, "%Y-%m-%d %H:%M")
+        else
+          Time.now.strftime("%Y-%m-%d %H:%M")
         end
       end
 
       def lazy_date(time)
-        if time
-          time.strftime("%Y-%m-%d")
+        if time.is_a? Time
+          time.try(:strftime, "%Y-%m-%d")
+        else
+          Time.now.strftime("%Y-%m-%d")
         end
       end
 
